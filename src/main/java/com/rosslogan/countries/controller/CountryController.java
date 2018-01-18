@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
+import java.util.Optional;
+import java.util.OptionalInt;
 
 @Controller
 public class CountryController {
@@ -27,7 +29,7 @@ public class CountryController {
     public String getCountry(@PathVariable String name, ModelMap modelMap){
         Country country = countryRepository.findByName(name);
         modelMap.put("country", country);
-        return "india";
+        return "country_details";
     }
 
 }

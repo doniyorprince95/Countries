@@ -5,15 +5,16 @@ import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 
 @Component
 public class CountryRepository {
     private static final List<Country> ALL_COUNTRIES = Arrays.asList(
-            new Country("Ecuador", "16.9M", "Quito", "Spanish"),
-            new Country("France", "67.2M", "Paris", "French"),
-            new Country("India", "1.3B", "New Delhi", "Hindi, English"),
-            new Country("Italy", "60.6M", "Rome", "Italian"),
-            new Country("Kenya", "49.1M", "Nairobi", "English, Kiswahili"));
+            new Country("Ecuador", "16.9M", "Quito", Arrays.asList("Spanish")),
+            new Country("France", "67.2M", "Paris", Arrays.asList("French")),
+            new Country("India", "1.3B", "New Delhi", Arrays.asList("Hindi", "English")),
+            new Country("Italy", "60.6M", "Rome", Arrays.asList("Italian")),
+            new Country("Kenya", "49.1M", "Nairobi", Arrays.asList("English", "Kiswahili")));
 
 
     public List<Country> getAllCountries(){
@@ -21,11 +22,8 @@ public class CountryRepository {
     }
 
     public Country findByName(String name){
-        for(Country country: ALL_COUNTRIES){
-            if(country.getCountryName().equals(name)){
-                return country;
-            }
-        }
-        return null;
+        return ALL_COUNTRIES.stream()
+                .filter(country -> country.getCountryName().equals(name))
+                .findFirst().orElse(null);
     }
 }

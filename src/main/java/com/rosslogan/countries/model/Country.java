@@ -1,13 +1,15 @@
 package com.rosslogan.countries.model;
 
 
+import java.util.List;
+
 public class Country {
     private String countryName;
     private String population;
     private String capitalCity;
-    private String languages;
+    private List<String> languages;
 
-    public Country(String countryName, String population, String capitalCity, String languages) {
+    public Country(String countryName, String population, String capitalCity, List<String> languages) {
         this.countryName = countryName;
         this.population = population;
         this.capitalCity = capitalCity;
@@ -38,11 +40,11 @@ public class Country {
         this.capitalCity = capitalCity;
     }
 
-    public String getLanguages() {
+    public List<String> getLanguages() {
         return languages;
     }
 
-    public void setLanguages(String languages) {
+    public void setLanguages(List<String> languages) {
         this.languages = languages;
     }
 }

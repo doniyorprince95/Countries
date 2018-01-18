@@ -10,11 +10,11 @@ import java.util.Optional;
 @Component
 public class CountryRepository {
     private static final List<Country> ALL_COUNTRIES = Arrays.asList(
-            new Country("Ecuador", "16.9M", "Quito", Arrays.asList("Spanish")),
-            new Country("France", "67.2M", "Paris", Arrays.asList("French")),
-            new Country("India", "1.3B", "New Delhi", Arrays.asList("Hindi", "English")),
-            new Country("Italy", "60.6M", "Rome", Arrays.asList("Italian")),
-            new Country("Kenya", "49.1M", "Nairobi", Arrays.asList("English", "Kiswahili")));
+            new Country("ecuador", "16.9M", "Quito", Arrays.asList("Spanish")),
+            new Country("france", "67.2M", "Paris", Arrays.asList("French")),
+            new Country("india", "1.3B", "New Delhi", Arrays.asList("Hindi", "English")),
+            new Country("italy", "60.6M", "Rome", Arrays.asList("Italian")),
+            new Country("kenya", "49.1M", "Nairobi", Arrays.asList("English", "Kiswahili")));
 
 
     public List<Country> getAllCountries(){

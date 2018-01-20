@@ -10,5 +10,5 @@ population size (in ascending order).
 
 ## Screenshot
 
-![alt text](countriesofworld.PNG)
+![Alt text](countriesofworld.PNG)
 

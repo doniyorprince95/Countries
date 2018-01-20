@@ -14,7 +14,7 @@ header {
 
 header h1 {
 	margin: 0;
-	padding: 10px 0;
+	padding: 15px 32px;
 	font-weight: 300;
 	text-transform: lowercase;
 }
@@ -140,3 +140,16 @@ img {
 		width: 35%;
 	}
 }
+
+.button {
+    font-family: 'Roboto Slab', serif;
+    background-color: #000;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+

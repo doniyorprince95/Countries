@@ -7,11 +7,12 @@
 	<title>Countries of the World</title>
 </head>
 <body>
-	<header>
-		<div class="container">
-			<h1><a href="index.html">Countries of the World</a></h1>
-		</div>
-	</header>
+<header>
+	<h1><a th:href="@{/}">Countries of the World</a></h1>
+	<a class="button">Sort by:</a>
+	<a th:href="@{/name}" class="button">name</a>
+	<a th:href="@{/population}" class="button">population</a>
+</header>
 	<div class="container">
 		<div th:each="country: ${countries}" class="country" >
 			<a th:href="@{'/country/' + ${country.countryName}}">

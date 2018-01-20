@@ -5,11 +5,11 @@ import java.util.List;
 
 public class Country {
     private String countryName;
-    private String population;
+    private int population;
     private String capitalCity;
     private List<String> languages;
 
-    public Country(String countryName, String population, String capitalCity, List<String> languages) {
+    public Country(String countryName, int population, String capitalCity, List<String> languages) {
         this.countryName = countryName;
         this.population = population;
         this.capitalCity = capitalCity;
@@ -24,11 +24,11 @@ public class Country {
         this.countryName = countryName;
     }
 
-    public String getPopulation() {
+    public int getPopulation() {
         return population;
     }
 
-    public void setPopulation(String population) {
+    public void setPopulation(int population) {
         this.population = population;
     }
 
